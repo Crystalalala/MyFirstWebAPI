@@ -35,6 +35,12 @@ namespace MyFirstWebAPI.Controllers
             _logger = logger;
         }
 
+        [HttpGet("helloworld")]
+        public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
+        {
+          return Ok($"Hello World");
+        }
+
         [HttpGet("even/odd/identifier")]
         public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
         {
