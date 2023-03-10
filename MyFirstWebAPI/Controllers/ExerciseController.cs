@@ -36,13 +36,13 @@ namespace MyFirstWebAPI.Controllers
         }
 
         [HttpGet("helloworld")]
-        public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
+        public IActionResult HelloWorld([FromQuery] int number)
         {
           return Ok($"Hello World");
         }
 
         [HttpGet("helloworld/crystal")]
-        public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
+        public IActionResult HelloWorldCrystal([FromQuery] int number)
         {
           return Ok($"Hello World Crystal");
         }
