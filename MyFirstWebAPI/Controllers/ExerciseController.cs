@@ -41,6 +41,12 @@ namespace MyFirstWebAPI.Controllers
           return Ok($"Hello World");
         }
 
+        [HttpGet("helloworld/crystal")]
+        public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
+        {
+          return Ok($"Hello World Crystal");
+        }
+
         [HttpGet("even/odd/identifier")]
         public IActionResult CheckNumberIfEvenOrOdd([FromQuery] int number)
         {
