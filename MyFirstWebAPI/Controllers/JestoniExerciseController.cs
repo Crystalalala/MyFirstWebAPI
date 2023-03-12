@@ -18,9 +18,9 @@ namespace MyFirstWebAPI.Controllers
             _logger = logger;
         }
         [HttpGet("exchange/number")]
-        public IActionResult ExchangeTheNumber([FromQuery] int firstNumber,[FromQuery] int secondNumber)
+        public IActionResult ExchangeTheNumber([FromQuery] int firstNumber, [FromQuery] int secondNumber)
         {
-            
+
             var x = firstNumber;
             firstNumber = secondNumber;
             secondNumber = x;
@@ -31,10 +31,10 @@ namespace MyFirstWebAPI.Controllers
 
         [HttpGet("result/number")]
         public IActionResult ResultOfThreeNumber([FromQuery] int firstNumber, [FromQuery] int secondNumber, [FromQuery] int thirdNumber)
-        {  
+        {
             int result = (firstNumber * secondNumber * thirdNumber);
             string output = ($"OutPut: {firstNumber} x {secondNumber} x {thirdNumber} = {result}");
-            return Ok(output); 
+            return Ok(output);
         }
         [HttpGet("outcome/number")]
         public IActionResult MeanOfFourNumber([FromQuery] int firstNumber, [FromQuery] int secondNumber, [FromQuery] int thirdNumber, [FromQuery] int fourthNumber)
@@ -107,7 +107,7 @@ namespace MyFirstWebAPI.Controllers
             return Ok(sentence);
         }
         [HttpGet("true/false/integer")]
-        public IActionResult CheckIfTrueOrFalse([FromQuery]int first)
+        public IActionResult CheckIfTrueOrFalse([FromQuery] int first)
         {
             string Traulse = "";
             int result = first % 3;
@@ -124,7 +124,7 @@ namespace MyFirstWebAPI.Controllers
             return Ok(Traulse);
         }
         [HttpGet("result/integer")]
-        public IActionResult CheckTheResultOfInteger([FromQuery]int firstNumber, [FromQuery]int secondNumber)
+        public IActionResult CheckTheResultOfInteger([FromQuery] int firstNumber, [FromQuery] int secondNumber)
         {
             string traulse = "";
             int x = firstNumber;
@@ -159,7 +159,7 @@ namespace MyFirstWebAPI.Controllers
             return Ok(value);
         }
         [HttpGet("long/word")]
-        public IActionResult PrintTheLongWord([FromQuery]string word, [FromQuery]string Txt)
+        public IActionResult PrintTheLongWord([FromQuery] string word, [FromQuery] string Txt)
         {
             var words = Txt.Split(' ');
 
