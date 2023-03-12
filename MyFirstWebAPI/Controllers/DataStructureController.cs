@@ -28,8 +28,13 @@ namespace MyFirstWebAPI
             numbers.Push(4);
             numbers.Push(5);
 
-            foreach (var item in numbers) ;
-            return Ok(numbers);
+            string result = "";
+
+            foreach (var item in numbers)
+            {
+                result = result + $"{item} \n";
+            }
+            return Ok(result);
         }
 
         [HttpGet("list")]
@@ -44,6 +49,26 @@ namespace MyFirstWebAPI
             foreach (var list in lists)
             {
                 result = result + $"{list} \n";
+            }
+            return Ok(result);
+        }
+
+
+        [HttpGet("queue/number")]
+        public IActionResult ExampleOfQueue()
+        {
+            Queue<int> number = new Queue<int>();
+            number.Enqueue(1);
+            number.Enqueue(2);
+            number.Enqueue(3);
+            number.Enqueue(4);
+            number.Enqueue(5);
+
+            string result = "";
+
+            foreach (var id in number)
+            {
+                result = result + $"{id} \n";
             }
             return Ok(result);
         }
