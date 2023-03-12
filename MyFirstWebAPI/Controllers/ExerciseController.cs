@@ -38,13 +38,13 @@ namespace MyFirstWebAPI.Controllers
         [HttpGet("helloworld")]
         public IActionResult HelloWorld([FromQuery] int number)
         {
-          return Ok($"Hello World");
+            return Ok($"Hello World");
         }
 
         [HttpGet("helloworld/crystal")]
         public IActionResult HelloWorldCrystal([FromQuery] int number)
         {
-          return Ok($"Hello World Crystal");
+            return Ok($"Hello World Crystal");
         }
 
         [HttpGet("even/odd/identifier")]
@@ -98,7 +98,7 @@ namespace MyFirstWebAPI.Controllers
         [HttpGet("voter/age/eligible/identifier")]
         public IActionResult CheckIfVotersAgeIsEligibleIdentifier([FromQuery] int age)
         {
-            string result = "";
+            string result = "a ".ToLower();
             bool eligible = age > 18;
 
             if (eligible)
@@ -112,23 +112,27 @@ namespace MyFirstWebAPI.Controllers
             return Ok(result);
 
         }
+
+     
+
         [HttpGet("decrement/increment/identifier")]
-        public IActionResult CheckIfDecrementOrIncrement([FromQuery] int number)
+        public IActionResult CheckIfDecrementOrIncrement()
         {
-            int result = 0;
-            return Ok("Moving Forward using Increment");
+            string result = "";
+            result = result + "Moving Forward using Increment \n";
             for (int i = 0; i <= 10; i++)
             {
-                result = (i);
+                result = result + $"{i} \n";
             }
 
-            return Ok("Moving Backward using Decrement");
+            result = result + "Moving Backward using Decrement \n";
             for (int i = 10; i >= 0; i--)
             {
-               result = (i);
+                result = result + $"{i} \n";
             }
             return Ok(result);
         }
+
         [HttpGet("comparison/accurate")]
         public IActionResult CheckIfComparisonIsAccurate([FromQuery] int number)
         {
@@ -411,7 +415,7 @@ namespace MyFirstWebAPI.Controllers
 
             for (int i = 1; i <= add; i++)
             {
-                 result = (i);
+                result = (i);
                 add2 = add2 + i;
             }
             return Ok($"The sum of natural number up to {add} terms:{add2}");
@@ -518,7 +522,7 @@ namespace MyFirstWebAPI.Controllers
         //}
     }
 }
-    
+
 
 
 
