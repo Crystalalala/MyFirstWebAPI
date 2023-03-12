@@ -31,5 +31,21 @@ namespace MyFirstWebAPI
             foreach (var item in numbers) ;
             return Ok(numbers);
         }
+
+        [HttpGet("list")]
+        public IActionResult GetList()
+        {
+            var lists = new List<string>();
+            lists.Add("new York");
+            lists.Add("London");
+            lists.Add("Mumbai");
+            lists.Add("Chicago");
+            string result = "";
+            foreach (var list in lists)
+            {
+                result = result + $"{list} \n";
+            }
+            return Ok(result);
+        }
     }
 }
