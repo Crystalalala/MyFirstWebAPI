@@ -72,5 +72,21 @@ namespace MyFirstWebAPI
             }
             return Ok(result);
         }
+        [HttpGet("dictionary")]
+        public IActionResult ExampleOfDictionary()
+        {
+            IDictionary<int, string> numberNames = new Dictionary<int, string>();
+            numberNames.Add(1, "One"); //adding a key/value using the Add() method
+            numberNames.Add(2, "Two");
+            numberNames.Add(3, "Three");
+            string result = "";
+
+            foreach (KeyValuePair<int, string> kvp in numberNames)
+            {
+                result = result + $"Key: {kvp.Key}, Value: {kvp.Value} \n"; 
+            }
+            return Ok(result);
+        }
+
     }
 }
