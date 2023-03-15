@@ -50,6 +50,7 @@ namespace MyFirstWebAPI
             {
                 result = result + $"{list} \n";
             }
+
             return Ok(result);
         }
 
