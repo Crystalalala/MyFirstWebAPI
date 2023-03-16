@@ -66,28 +66,32 @@ namespace MyFirstWebAPI.Controllers
         public IActionResult GetSchool([FromQuery] bool isPrivate)
         {
             List<School> schools = new List<School>(){
-                new School(){ Id = 1, 
+                new School()
+                { Id = 1, 
                     Name="JRU",
                     Address="Manda",
                     BuildingNo = 1,
                     Country = "PH",
                     IsPrivate = true
                 },
-                new School(){ Id = 2,
+                new School()
+                { Id = 2,
                     Name="SBU",
                     Address="Manila",
                     BuildingNo = 2,
                     Country = "PH",
                     IsPrivate = true
                 },
-                    new School(){ Id = 3,
+                new School()
+                { Id = 3,
                     Name="SEHS",
                     Address="Marikina",
                     BuildingNo = 3,
                     Country = "PH",
                     IsPrivate = false
                 },
-                     new School(){ Id = 4,
+                new School()
+                { Id = 4,
                     Name="RTU",
                     Address="Manda",
                     BuildingNo = 4,
