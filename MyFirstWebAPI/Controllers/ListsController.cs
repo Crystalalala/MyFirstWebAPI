@@ -231,7 +231,6 @@ namespace MyFirstWebAPI.Controllers
                 },
             };
 
-
             string result = "";
 
             schools = schools.OrderByDescending(x => x.Name).ToList();
